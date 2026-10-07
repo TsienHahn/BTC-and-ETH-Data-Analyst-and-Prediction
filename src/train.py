@@ -84,7 +84,7 @@ def main():
     data_path = (
         PROJECT_ROOT
         / "data"
-        / "raw"
+        / "sample"
         / "test_crypto_data.csv"
     )
 

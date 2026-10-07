@@ -46,6 +46,7 @@ def create_project_directories() -> None:
     """Create directories required by the pipeline."""
 
     directories = [
+        PROJECT_ROOT / "data" / "sample",
         PROJECT_ROOT / "data" / "raw",
         PROJECT_ROOT / "data" / "processed",
         PROJECT_ROOT / "models",
