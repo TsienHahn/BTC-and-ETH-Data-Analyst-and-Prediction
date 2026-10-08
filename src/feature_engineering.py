@@ -74,7 +74,22 @@ def add_technical_indicators(
         ignore_index=True
     )
 
-    return result.dropna().reset_index(drop=True)
+    INDICATOR_COLUMNS = [
+    "SMA_10",
+    "SMA_30",
+    "EMA_5",
+    "EMA_20",
+    "RSI_14",
+    "MACD",
+    "MACD_Signal"
+    ]
+
+    return (
+    result
+    .dropna(subset=INDICATOR_COLUMNS)
+    .sort_values(["Asset", "Date"])
+    .reset_index(drop=True)
+)
 
 
 def create_sequences(
